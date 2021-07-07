@@ -55,6 +55,7 @@ export default Vue.extend({
 
           this.$store.commit('user/add', user)
           this.$router.push('/')
+          this.loading = false
         } catch (error) {
           this.loading = false
         }

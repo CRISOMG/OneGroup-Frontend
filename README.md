@@ -2,7 +2,7 @@
 
 ### Preparando Entorno
 
-Este Cliente o Frontend consume una API o Backend que es [OneGroup Backend](),
+Este Cliente o Frontend consume una API o Backend que es [OneGroup Backend](https://github.com/CRISOMG/OneGroup-Backend),
 recomiendo preparar ese entorno antes que este.
 
 .env.example
