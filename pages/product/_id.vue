@@ -123,11 +123,11 @@ export default Vue.extend({
   display: block;
 }
 .product-details {
-  width: 32rem;
+  width: fit-content;
   margin: 1rem auto;
+  padding: 0 4px;
   &__image {
     width: 32rem;
-    height: 21.5rem;
     border-radius: 0.5rem;
     background-color: grey;
   }
@@ -148,6 +148,23 @@ export default Vue.extend({
   width: 10rem;
   button {
     width: 4rem;
+  }
+}
+
+@media only screen and (max-width: 526px) {
+  .product-details {
+    &__image {
+      width: 22rem;
+      height: 14.7rem;
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .product-details {
+    &__image {
+      width: 18rem;
+      height: 12rem;
+    }
   }
 }
 </style>

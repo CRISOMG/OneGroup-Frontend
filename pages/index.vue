@@ -7,11 +7,11 @@
       button(@click="nextPage" :disabled="loading") +
 
     product-list(:products="products" v-if="!loading")
-    p(v-if="products.length === 0") Page is empty
+    p(v-if="products.length === 0").page-empty Page is empty
 
-    .loader-container
+    div(v-if="loading").loader-container
       pulse-loader(:loading="loading")
-    
+
     .link-container
       NuxtLink(to="/product/create" class="reset-link-styles") Create Product
 
@@ -91,8 +91,13 @@ export default Vue.extend({
   text-decoration: none;
 }
 .link-container {
-  position: absolute;
-  bottom: 6rem;
+  display: flex;
+  align-items: baseline;
+  margin: auto 0 1rem;
+  padding: 1rem;
+}
+.page-empty {
+  margin: auto;
 }
 
 .container {
